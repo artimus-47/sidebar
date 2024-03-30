@@ -1,0 +1,226 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 78px;
+  height: 100%;
+  background: #11101d;
+  padding: 6px 14px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.sidebar.active{
+  width: 280px;
+
+
+}
+
+.sidebar .logo_content .logo{
+  color: #fff;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar.active .logo_content .logo{
+  opacity: 1;
+  pointer-events: none;
+}
+
+.logo_content .logo i{
+  font-size: 28px;
+  margin-right: 5px;
+
+}
+
+.logo_content .logo .logoname{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sidebar #btn{
+position: absolute;
+color: #fff;
+left: 22%;
+top: 6px;
+font-size: 20px;
+height: 50px;
+width: 50px;
+text-align: center;
+line-height: 50px;
+}
+
+.sidebar.active #btn{
+  left: 82%;
+  top: 6px;
+}
+
+
+.sidebar ul{
+  margin-top: 20px;
+}
+
+.sidebar ul li{
+  position: relative;
+  height: 50px;
+  width: 250px;
+  margin: 0 5px;
+  list-style: none;
+  line-height: 50px;
+}
+
+.sidebar ul li input{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: #171627;
+  padding-left: 50px;
+  font-size: 16px;
+  color: #fff;
+}
+.sidebar.active ul li input{
+  width: 240px;
+}
+.sidebar ul li .bx-search{
+  position: absolute;
+  z-index: 99;
+  color: #fff;
+  font-size: 22px;
+  transition: all 0.5s ease;
+}
+
+.sidebar ul li .bx-search:hover{
+  background: #fff;
+  color: #11101d;
+}
+
+
+.sidebar ul li a{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  border-radius: 12px;
+  
+}
+
+.sidebar ul li a i:hover{
+  color: #11101d;
+  background: #fff;
+}
+
+.sidebar.active ul li a:hover{
+  color: #11101d;
+  background: #fff;
+  
+}
+
+.sidebar .linkname{
+  opacity: 0;
+  pointer-events: auto;
+}
+.sidebar.active .linkname{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar ul li  i{
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+#logout{
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  color: #fff;
+  width: 50px;
+  line-height: 70px;
+  font-size: 18px;
+  
+}
+
+
+#logout.active{
+  bottom: 5px;
+  left: 230px;
+}
+
+
+.home{
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 290px);
+  left: 78px;
+  transition: all 0.5s ease;
+
+}
+
+.sidebar.active ~ .home{
+  width:calc(100% - 280px) ;
+  left: 280px;
+}
+
+.home .text{
+  font-size: 25px;
+  font-weight: 500;
+  color: #11101d;
+  margin: 12px;
+}
+
+#light{
+  position: absolute;
+  bottom: 5px;
+  left: 33px;
+  color: #fff;
+  width: 50px;
+  line-height: 70px;
+  font-size: 18px;
+  opacity: 0;
+}
+
+#light.active{
+  bottom: 0px;
+  left: 230px;
+}
+#moon{
+  position: absolute;
+  bottom: 5px;
+  left: 33px;
+  color: #fff;
+  width: 50px;
+  line-height: 70px;
+  font-size: 18px;
+  opacity: 0;
+}
+
+#moon.active{
+  bottom: 0px;
+  left: 230px;
+}
+
